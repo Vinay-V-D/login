@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | Premium Online Course</title>
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Card Container -->
+        <div class="registration-card">
+            <header class="card-header">
+                <h1>Course Registration</h1>
+                <p>Join us today! Fill in your details below.</p>
+            </header>
+
+            <form id="registrationForm" action="submit.php" method="POST" novalidate>
+                
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. John Doe" required minlength="2">
+                    <small class="error-msg" id="nameError">Name must be at least 2 characters.</small>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="e.g. john@example.com" required>
+                    <small class="error-msg" id="emailError">Please enter a valid email address.</small>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" required>
+                    <small class="error-msg" id="phoneError">Please enter a valid 10-digit phone number.</small>
+                </div>
+
+                <!-- Date of Birth & Gender Group -->
+                <div class="form-row">
+                    <!-- Date of Birth -->
+                    <div class="form-group half-width">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group half-width">
+                        <label>Gender <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Male" required> Male
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Female"> Female
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Other"> Other
+                            </label>
+                        </div>
+                        <small class="error-msg" id="genderError">Please select a gender.</small>
+                    </div>
+                </div>
+
+                <!-- Course Selection -->
+                <div class="form-group">
+                    <label for="course">Select Course <span class="required">*</span></label>
+                    <select id="course" name="course" required>
+                        <option value="" disabled selected>-- Choose a Program --</option>
+                        <option value="web-dev">Full Stack Web Development</option>
+                        <option value="data-sci">Data Science & AI</option>
+                        <option value="ui-ux">UI/UX Design Masterclass</option>
+                        <option value="digi-mark">Digital Marketing Pro</option>
+                    </select>
+                    <small class="error-msg" id="courseError">Please select a course.</small>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter your current address..."></textarea>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label" for="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to the <a href="#">Terms & Conditions</a> and Privacy Policy.
+                    </label>
+                    <small class="error-msg" id="termsError">You must agree to the terms.</small>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn">Register Now</button>
+                </div>
+
+            </form>
+        </div>
+        
+        <footer class="site-footer">
+            <p>&copy; 2024 Education Portal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>

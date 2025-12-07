@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful (Preview)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .success-icon { font-size: 3rem; color: #10B981; margin-bottom: 1rem; }
+        .data-list { text-align: left; margin-top: 1.5rem; border-top: 1px solid #E5E7EB; padding-top: 1rem; }
+        .data-item { margin-bottom: 0.5rem; }
+        .data-label { font-weight: 600; color: #4B5563; }
+        .preview-banner { background: #FFF7ED; border: 1px solid #FDBA74; color: #C2410C; padding: 0.75rem; text-align: center; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="registration-card" style="text-align: center;">
+            <div class="preview-banner">
+                <strong>Local Preview Mode</strong><br>
+                This is a static simulation. In production (InfinityFree), this data is processed by PHP.
+            </div>
+
+            <div class="success-icon">&#10004;</div>
+            <header class="card-header">
+                <h1>Registration Successful!</h1>
+                <p>Thank you, <strong>John Doe</strong>. We have received your details.</p>
+            </header>
+
+            <div class="data-list">
+                <div class="data-item"><span class="data-label">Email:</span> john@example.com</div>
+                <div class="data-item"><span class="data-label">Phone:</span> 9876543210</div>
+                <div class="data-item"><span class="data-label">DOB:</span> 2000-01-01</div>
+                <div class="data-item"><span class="data-label">Gender:</span> Male</div>
+                <div class="data-item"><span class="data-label">Course:</span> web-dev</div>
+                <div class="data-item"><span class="data-label">Address:</span> 123 Main St, City</div>
+            </div>
+
+            <div class="form-actions">
+                <a href="index.html" style="text-decoration: none;">
+                    <button type="button">Register Another Student</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
